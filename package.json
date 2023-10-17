@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "upload-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "keywords": [
+    "upload",
+    "server",
+    "image",
+    "upload",
+    "webm",
+    "upload"
+  ],
+  "author": "NakreS",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "1.4.5-lts.1",
+    "slugify": "^1.6.6"
+  }
+}
