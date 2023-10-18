@@ -34,12 +34,12 @@ if "%OS%"=="Windows_NT" (
 echo ---------------------------------------------------------------------
 
 @REM Bağımlılıkları kontrol et
-if not exist node_modules\NUL (
+if not exist package-lock.json || not exist pnpm-lock.yaml (
   echo Downloaded node_modules...
   pnpm install || npm install
 ) else (
   echo Node modules already installed. APP Starting...
-  pnpm run nodemon || npm run nodemon
+  npm run nodemon
 )
 
 pause

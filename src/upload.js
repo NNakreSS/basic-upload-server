@@ -52,7 +52,7 @@ export default class Upload {
       const file = {
         mimetype: req.file.mimetype,
         size: req.file.size,
-        url: `http://localhost:3000/uploads/${token}`,
+        url: `http://localhost:3000/${this.uploadDir}/${token}`,
         timestamp: Date.now(),
       };
 
@@ -73,7 +73,7 @@ export default class Upload {
           .json({ success: false, message: "Geçersiz token" });
       }
       // Doğrulanmışsa, dosya adını kullanarak dosyayı yolla
-      const filePath = path.join(cwd(), "uploads", decoded.fileName);
+      const filePath = path.join(cwd(), this.uploadDir, decoded.fileName);
       res.sendFile(filePath);
     });
   };
