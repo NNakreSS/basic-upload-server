@@ -34,7 +34,7 @@ if "%OS%"=="Windows_NT" (
 echo ---------------------------------------------------------------------
 
 @REM Bağımlılıkları kontrol et
-if not exist package-lock.json || not exist pnpm-lock.yaml (
+if not exist node_modules\NUL (
   echo Downloaded node_modules...
   pnpm install || npm install
 ) else (
